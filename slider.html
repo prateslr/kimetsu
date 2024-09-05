@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section class="slider">
+    <div class="slides">
+        <div class="slide">
+          <img class="img-desktop1" src="assets/img/tanjiro.jpeg" alt="">
+        </div>
+        <div class="slide">
+          <img class="img-desktop2" src="assets/img/muzan.png" alt="">
+        </div>
+        <div class="slide">
+          <img class="img-desktop3" src="assets/img/logo.jpg" alt="">
+        </div>
+    </div>
+  </section><!--end slider-->
+
+  <style>
+    /* slider */
+
+.slider {
+  position: relative;
+  margin-top: 84px;
+  width: 100%;
+  height: 670px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 100%;
+  height: 670px;
+}
+
+.slide {
+  min-width: 100%;
+  height: 670px;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 670px;
+}
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelector('.slides');
+    const slideCount = document.querySelectorAll('.slide').length;
+    let index = 0;
+
+    function nextSlide() {
+        index = (index + 1) % slideCount;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(nextSlide, 5000);
+});
+  </script>
+</body>
+</html>
