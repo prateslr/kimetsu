@@ -10,6 +10,15 @@
 
 /* geral*/
 
+:root {
+  --color1: #3f264d;
+  --color2: #5d2747;
+  --color3: #9f3647;
+  --color4: #db4648;
+  --color5: #fb9553;
+  --menu: #5d2747;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
@@ -38,37 +47,25 @@ p {
 /* header */
 
 .nav-bar {
+  background: #666;
   display: flex;
   justify-content: space-around;
   letter-spacing: 1px;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 999;
+  left: 0;
+  z-index: 1;
   padding: 10px;
-  box-shadow: 0 0 8px #3e3563;
-  background-image: linear-gradient(to left top, #23232e, #242447);
 }
 
-.logo img {
+.nav-item {
   height: 60px;
-  text-decoration: none;
 }
 
-.nav-list {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.nav-item:not(:last-child) {
-  margin-right: 20px;
+.navbar-nav .nav-item:hover {
+  transition: all .3s;
+  background: #666;
 }
 
 /* hero */
@@ -81,9 +78,8 @@ p {
   align-items: center;
   justify-content: center;
 
-  background: url('/assets/img/logo.jpg');
+  background: url('https://a.storyblok.com/f/178900/1920x1023/2435d44804/demon-slayer_-kimetsu-no-yaiba-to-the-hashira-training.png') center no-repeat;
   background-attachment: fixed;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -101,19 +97,18 @@ p {
 
 #about {
   width: 100%;
-  height: 700px;
-  background: #fff;
-  display: grid;
-  place-items: center;
+  padding: 60px;
+  background: #e6e6e6;
 }
 
 .container-about {
-  background: #fff;
+  background: #e6e6e6;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
   justify-content: center;
+  align-items: center;
   gap: 100px;
 }
 
@@ -124,12 +119,25 @@ p {
 .img-sinopse {
   width: 750px;
   height: 450px;
-  border-radius: 60px 200px 60px 200px;
+  border-radius: 10px;
 }
 
-.arg-about .tittle-section {
+.tittle-section {
   font-size: 32px;
-  margin: 20px;
+  font-weight: bold;
+  padding: 6px 0 0 20px;
+  position: relative;
+}
+
+.tittle-section::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 47px;
+  height: 3px;
+  background: #05cad8;
+  margin-top: 9px;
+  bottom: 0;
 }
 
 .arg-about .text-section {
@@ -146,18 +154,17 @@ p {
 
 #onis {
   width: 100%;
-  height: 700px;
-  background: #852828;
-
 }
 
 .container-onis {
-  background: #fff;
+  background: #e6e6e6;
+  width: 100%;
+  height: 950px;
   padding: 20px;
 }
 
 .arg-onis {
-  background: #fff;
+  background: #e6e6e6;
 }
 
 .arg-onis .tittle-section {
@@ -201,7 +208,6 @@ p {
 
 .oni-img:hover {
   transform: scale(1.03);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 figcaption {
@@ -260,4 +266,14 @@ figcaption {
 .card button:hover {
   background-color: #137de8;
   cursor: pointer;
+}
+
+/* Parallax */
+
+#parallax {
+  width: 100%;
+  height: 800px;
+
+  background: url('') center no-repeat;
+  background-attachment: fixed;
 }
