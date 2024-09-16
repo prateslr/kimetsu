@@ -6,7 +6,7 @@
 
   <!--Links Externos-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="shortcut icon" href="https://i.pinimg.com/originals/1c/99/90/1c9990cdbbff7b83ebe4736aade5ddc0.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -27,12 +27,18 @@
 </head>
 <body>
   <header id="header" class="header">
-    <nav class="navbar">
-        <a class="logo" href="#"><h1><span>K</span>imetsu<span>P</span>ath</h1></a>
+    <nav class="nav-bar" id="navbar">
+      <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+      <a class="logo" href="#"><h1><span>K</span>imetsu<span>P</span>ath</h1></a>
       <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" id="about-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" id="onis-link" href="#">Onis</a></li>
-        <li class="nav-item"><a class="nav-link" id="hunters-link" href="#">Hunters</a></li>
+        <li class="nav-item"><a class="nav-link" href='#about'>About</a></li>
+        <li class="nav-item"><a class='dropdown-arrow' id="nav-link-drop" href='#'>Onis</a>
+          <ul class='sub-menu'>
+            <li class="nav-item-drop"><a class="nav-link-drop" href='#'>Superiores</a></li>
+            <li class="nav-item-drop"><a class="nav-link-drop" href='#'>Inferiores</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href='#'>Hunters</a></li>
       </ul>
     </nav>
   </header><!--end header-->
@@ -57,45 +63,40 @@
   
   <section id="about" class="about">
     <div class="container-about">
-      <figure class="muzan-about">
-        <img src="assets/img/muzan.jpg" alt="imagem do muzan kibutsuji no arco: Hashira Training">
-      </figure>
-      <div class="arg-about1">
-        <h1 class="tittle-about">Sobre</h1>
-        <p class="text-about">
-          Kimetsu no Yaiba se passa em um Japão fictício durante o período Taisho (1912-1926). 
-          A história segue Tanjiro Kamado, um jovem amável e trabalhador que vive com sua família 
-          em uma pequena aldeia nas montanhas. <br>
+      <div class="topo-about">
+        <figure>
+          <img class="img-about" src="https://img.ibxk.com.br/2024/01/17/17113534532068.jpg?ims=328x" alt="imagem do Tanjiro Kamado">
+          <figcaption>Tanjiro Kamado, Protagonista de Demon Slayer</figcaption>
+        </figure>
+        <div class="arg-about">
+          <h1 class="tittle-about">Sobre</h1>
+          <p class="text-about">
+            Kimetsu no Yaiba se passa em um Japão fictício durante o período Taisho (1912-1926). 
+            A história segue Tanjiro Kamado, um jovem amável e trabalhador que vive com sua família 
+            em uma pequena aldeia nas montanhas. <br>
+  
+            <br> A vida de Tanjiro muda drasticamente quando ele retorna para casa e descobre que sua família 
+            foi brutalmente assassinada por demônios. Apenas sua irmã, Nezuko, sobrevive, mas ela também 
+            foi transformada em um demônio. <br>
+  
+            <br> Determinado a encontrar uma cura para Nezuko e vingar sua família, Tanjiro se junta à Corporação 
+            dos Caçadores de Demônios, uma organização secreta dedicada a erradicar demônios e proteger a 
+            humanidade. Ele é treinado para se tornar um Caçador de Demônios e recebe uma espada especial. <br>
+  
+            <br> Durante sua jornada, Tanjiro conhece e se torna amigo de outros caçadores de demônios, como Zenitsu 
+            Agatsuma e Inosuke Hashibira. Juntos, eles enfrentam demônios poderosos e desafios enquanto buscam 
+            maneiras de ajudar Nezuko e derrotar o líder dos demônios, Muzan Kibutsuji. <br>
 
-          <br> A vida de Tanjiro muda drasticamente quando ele retorna para casa e descobre que sua família 
-          foi brutalmente assassinada por demônios. Apenas sua irmã, Nezuko, sobrevive, mas ela também 
-          foi transformada em um demônio. <br>
+            <br> Ao longo da série, Tanjiro e seus amigos enfrentam muitos desafios, desvendam segredos sobre a origem 
+            dos demônios e descobrem a história por trás da transformação de Nezuko. A batalha culmina em uma intensa 
+            luta contra Muzan Kibutsuji e seus subordinados, levando a uma conclusão épica. <br>
 
-          <br> Determinado a encontrar uma cura para Nezuko e vingar sua família, Tanjiro se junta à Corporação 
-          dos Caçadores de Demônios, uma organização secreta dedicada a erradicar demônios e proteger a 
-          humanidade. Ele é treinado para se tornar um Caçador de Demônios e recebe uma espada especial. <br>
-
-          <br> Durante sua jornada, Tanjiro conhece e se torna amigo de outros caçadores de demônios, como Zenitsu 
-          Agatsuma e Inosuke Hashibira. Juntos, eles enfrentam demônios poderosos e desafios enquanto buscam 
-          maneiras de ajudar Nezuko e derrotar o líder dos demônios, Muzan Kibutsuji. <br>
-        </p>
+            <br> A série explora temas de amizade, sacrifício, redenção e a luta entre o bem e o mal, com um foco 
+            particular na resiliência e na força interior dos personagens. <br>
+          </p>
+        </div>
       </div>
     </div>
-    
-    
-
-    
-
-    
-
-    
-
-    <br> Ao longo da série, Tanjiro e seus amigos enfrentam muitos desafios, desvendam segredos sobre a origem 
-    dos demônios e descobrem a história por trás da transformação de Nezuko. A batalha culmina em uma intensa 
-    luta contra Muzan Kibutsuji e seus subordinados, levando a uma conclusão épica. <br>
-
-    <br> A série explora temas de amizade, sacrifício, redenção e a luta entre o bem e o mal, com um foco 
-    particular na resiliência e na força interior dos personagens. <br>
   </section><!--end about-->
 
   <section id="onis" class="onis">
@@ -103,9 +104,9 @@
       <div class="arg-onis">
         <h1 class="tittle-section">Onis</h1>
         <p class="text-section">
-          Oni é uma raça ancestral de seres monstruosos, sobrenaturais e imortais. 
-          Praticamente todos os Oni possuem um instinto assassino de matar e devorar 
-          humanos, e perdem a maior parte de suas memórias de sua vida humana.
+          Onis são humanos que são transformados em demônios e para que eles sejam transformados eles precisam receber
+          o sangue do Rei dos Onis Muzan Kibutsuji, onde quem recebe o sague de Muzan tem uma chance de se tornar oni
+
         </p>
       </div>
 
@@ -154,5 +155,11 @@
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
   </section><!--end vlibras-->
+  <script>
+    (functio(){ var s = document.createElement('script');var h =
+    document.querySelector('head') || document.body;s.charset="UTF-8";s.src =
+    'https://cdn.assistive.com.br/plugin/AssistiveWebPlugin.js';s.async = true;s.onload =
+    function(){assistive.init({});};h.appendChild(s);})();
+  </script>
 </body>
 </html>
