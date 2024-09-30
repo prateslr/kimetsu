@@ -1,2 +1,2 @@
 # kimetsu
-https://pratestech.github.io/kimetsu/index.html
+https://prateslr.github.io/kimetsu/index.html
